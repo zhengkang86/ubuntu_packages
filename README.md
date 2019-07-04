@@ -6,6 +6,9 @@ Packages to be installed for Ubuntu or other Linux distributions, for developmen
 * NVIDIA driver
 * CUDA & cudnn
 * TeamViewer
+* htop
+* lm-sensors
+* vim/nano
 
 ### General
 * Chrome
