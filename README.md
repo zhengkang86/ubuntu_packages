@@ -18,6 +18,7 @@ Packages to be installed for Ubuntu or other Linux distributions, for developmen
 
 ### Collaboration tools
 * Slack
+* Dropbox
 
 ### Programming
 * Anaconda w/ Python
