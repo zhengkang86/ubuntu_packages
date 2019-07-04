@@ -12,6 +12,8 @@ Packages to be installed for Ubuntu or other Linux distributions, for developmen
 * Simple note (note with Markdown support, all-platform support)
 * Typora (note with Markdown support, desktop-platform support)
 * Foxit reader
+
+### Collaboration tools
 * Slack
 
 ### Programming
@@ -22,9 +24,16 @@ Packages to be installed for Ubuntu or other Linux distributions, for developmen
 * Microsoft VS Code
 * MATLAB (if licensed)
 
+### Deep learning packages
+* Caffe
+* Tensorflow & Keras
+* PyTorch (most recommened)
+* Tensorboard (for visualization)
+
 ### Documentation
-* LaTex (e.g. TexMaker)
+* LaTex (e.g. TexMaker, Lyx)
 * Online docs (e.g. Google Docs/Spreadsheet/Slides)
+* Online LaTex (e.g. Overleaf)
 
 ### Graphics support
 * Inkscape
