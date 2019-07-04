@@ -38,6 +38,7 @@ Packages to be installed for Ubuntu or other Linux distributions, for developmen
 * LaTex (e.g. TexMaker, Lyx)
 * Online docs (e.g. Google Docs/Spreadsheet/Slides)
 * Online LaTex (e.g. Overleaf)
+* Mathpix (convert equation snapshot into latex code)
 
 ### Graphics support
 * Inkscape
