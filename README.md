@@ -9,6 +9,7 @@ Packages to be installed for Ubuntu or other Linux distributions, for developmen
 * htop
 * lm-sensors
 * vim/nano
+* tmux
 
 ### General
 * Chrome
