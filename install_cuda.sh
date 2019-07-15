@@ -7,6 +7,10 @@ sudo apt-key add /var/cuda-repo-10-0-local-10.0.130-410.48/7fa2af80.pub
 sudo apt-get update
 sudo apt-get install cuda
 
+# Install CUDA samples
+#cd /usr/local/cuda-10.0/samples
+#sudo make
+
 # Install patch
 sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-nvjpeg-update-1_1.0-1_amd64.deb
 
