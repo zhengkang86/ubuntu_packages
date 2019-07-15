@@ -18,8 +18,8 @@ sudo apt-get install cuda
 # Test CUDA samples
 #/usr/local/cuda-10.0/samples/bin/x86_64/linux/release/deviceQuery
 
-# Install patch
-sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-nvjpeg-update-1_1.0-1_amd64.deb
+# Install patch for CUDA 10.0
+#sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-nvjpeg-update-1_1.0-1_amd64.deb
 
 # Export CUDA path to $PATH variable
 export PATH=$PATH:/usr/local/cuda/bin
