@@ -14,7 +14,7 @@ alias ll='ls -alFh'
 alias feh='feh --scale-down'
 alias df='df -h'
 alias nv='nvidia-smi'
-alias nv='watch -n1 nvidia-smi'
+#alias nv='watch -n1 nvidia-smi'
 
 # aliases for git
 alias gau='git add -u'
