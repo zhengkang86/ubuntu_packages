@@ -3,7 +3,7 @@ Packages to be installed for Ubuntu or other Linux distributions, for developmen
 
 
 ### OS-level
-* NVIDIA driver
+* NVIDIA driver (Remember to install `nvidia-modprobe` together with `nvidia-driver-xxx`)
 * CUDA & cudnn
 * TeamViewer
 * htop
