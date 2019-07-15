@@ -1,3 +1,6 @@
+# Refer to this page: https://medium.com/@zhanwenchen/install-cuda-10-1-and-cudnn-7-5-0-for-pytorch-on-ubuntu-18-04-lts-9b6124c44cc
+
+
 # Check nvidia driver installation
 lsmod | grep nvidia
 
