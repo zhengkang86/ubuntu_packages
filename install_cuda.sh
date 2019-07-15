@@ -21,10 +21,10 @@ sudo apt-get install cuda
 # Install patch for CUDA 10.0
 #sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-nvjpeg-update-1_1.0-1_amd64.deb
 
-# Export CUDA path to $PATH variable
+# Add the following line to ~/.bashrc file. Export CUDA path to $PATH variable
 export PATH=$PATH:/usr/local/cuda/bin
 
-# Export CUDA lib path to $LD_LIBRARY_PATH variable
+# Add the following line to ~/.bashrc file. Export CUDA lib path to $LD_LIBRARY_PATH variable
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 
 # Reboot
