@@ -1,5 +1,6 @@
 # Refer to this page: https://medium.com/@zhanwenchen/install-cuda-10-1-and-cudnn-7-5-0-for-pytorch-on-ubuntu-18-04-lts-9b6124c44cc
 
+# Install CUDA 10.0 (requires nvidia driver version >= 410.48)
 
 # Check nvidia driver installation
 lsmod | grep nvidia
@@ -13,6 +14,9 @@ sudo apt-get install cuda
 # Install CUDA samples
 #cd /usr/local/cuda-10.0/samples
 #sudo make
+
+# Test CUDA samples
+#/usr/local/cuda-10.0/samples/bin/x86_64/linux/release/deviceQuery
 
 # Install patch
 sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-nvjpeg-update-1_1.0-1_amd64.deb
