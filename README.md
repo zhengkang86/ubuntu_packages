@@ -12,6 +12,7 @@ Refer to: https://medium.com/@zhanwenchen/install-cuda-10-1-and-cudnn-7-5-0-for-
 * lm-sensors
 * vim/nano
 * tmux
+* git
 
 ### General
 * Chrome
