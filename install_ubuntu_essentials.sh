@@ -1,5 +1,5 @@
 # System essentials
-sudo apt install htop lm-sensors tmux screen vim git -y
+sudo apt install htop lm-sensors tmux screen vim git feh -y
 
 # Other packages
 sudo apt install inkscape gimp -y
