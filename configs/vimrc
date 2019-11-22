@@ -1,0 +1,261 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Easy path finder
+Plugin 'kien/ctrlp.vim'
+
+" Autocomplete plugin
+if has('nvim')
+    Plugin 'roxma/nvim-completion-manager'
+endif
+
+" Python support
+Plugin 'davidhalter/jedi-vim'
+Plugin 'python-mode/python-mode'
+
+" use color scheme
+"Plugin 'crucerucalin/peaksea.vim'
+"Plugin 'crusoexia/vim-monokai'
+Plugin 'tomasr/molokai'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'junegunn/seoul256.vim'
+Plugin 'morhetz/gruvbox'
+
+" use vimtex
+Plugin 'lervag/vimtex'
+
+" use easymotion
+Plugin 'easymotion/vim-easymotion'
+
+" use SimplyFold
+Plugin 'tmhedberg/SimpylFold'
+
+" code structure browser
+Plugin 'majutsushi/tagbar'
+
+" git client and gutter
+Plugin 'tpope/vim-fugitive'
+
+" code linting
+if has('nvim')
+    Plugin 'w0rp/ale'
+endif
+Plugin 'tell-k/vim-autopep8'
+
+" window managment
+Plugin 'romgrk/winteract.vim'
+
+" commmenter
+Plugin 'scrooloose/nerdcommenter'
+
+" CSV file type plugin
+Plugin 'chrisbra/csv.vim'
+
+" file browser
+Plugin 'scrooloose/nerdtree'
+
+" tab / status bar
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'zefei/vim-wintabs'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Set python path
+let g:python3_host_prog = '/Users/yiruiwang/anaconda3/bin/python'
+
+" Use jedi for code navigation
+let g:jedi#completions_enabled = 0
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<leader>G"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = ""
+let g:jedi#rename_command = "<leader>r"
+
+" pymode configurations
+let g:pymode_python = 'python3'
+let g:pymode_lint = 0
+let g:pymode_rope = 0
+let g:pymode_rope_completion = 0
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_warnings = 0
+let g:pymode_options = 0
+let g:pymode_run = 0
+let g:pymode_doc = 0
+let g:pymode_virtualenv = 1
+let g:pymode_breakpoint = 1
+let g:pymode_folding = 0
+let g:pymode_doc_bind = ''
+let g:pymode_rope_rename_bind = ''
+let g:pymode_rope_rename_module_bind = ''
+let g:pymode_rope_organize_imports_bind = ''
+let g:pymode_rope_autoimport_bind = ''
+let g:pymode_rope_module_to_package_bind = ''
+let g:pymode_rope_extract_method_bind = ''
+let g:pymode_rope_extract_variable_bind = ''
+let g:pymode_rope_use_function_bind = ''
+let g:pymode_rope_move_bind = ''
+let g:pymode_rope_change_signature_bind = ''
+
+" Complete manager configurations
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Nerdtree configurations
+map <C-e> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Ctrlp configurations
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|pyc)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+" Configure EasyMotion
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" personal preferences
+syntax on
+"let g:gruvbox_italic=1
+"let g:jellybeans_use_term_italics = 1
+colorscheme jellybeans
+set background=dark
+set guifont=Monaco:h10
+set relativenumber
+set updatetime=500
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+set backspace=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set list
+set listchars=tab:>-
+set ignorecase
+set colorcolumn=100
+set foldlevelstart=99
+set autoread
+set cursorline
+setlocal number relativenumber
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+
+" refresh buffer
+nnoremap <F5> :checktime<CR>
+
+" move up and down in soft wrapped lines
+noremap k gk
+noremap j gj
+
+"These are to cancel the default behavior of d, D, c, C
+"  to put the text they delete in the default register.
+"  Note that this means e.g. "ad won't copy the text into
+"  register a anymore.  You have to explicitly yank it.
+nnoremap c "_c
+vnoremap c "_c
+nnoremap C "_C
+vnoremap C "_C
+xnoremap p pgvy
+
+" TagBar settings
+nmap <C-N> :TagbarToggle<CR>
+
+" Window interaction
+nmap <silent> gw :InteractiveWindow<CR>
+
+" vim-wintabs configurations
+"let g:wintabs_display='statusline'
+map <C-H> <Plug>(wintabs_previous)
+map <C-L> <Plug>(wintabs_next)
+map <C-T>c <Plug>(wintabs_close)
+map <C-T>u <Plug>(wintabs_undo)
+map <C-T>o <Plug>(wintabs_only)
+map <C-W>c <Plug>(wintabs_close_window)
+map <C-W>o <Plug>(wintabs_only_window)
+command! Tabc WintabsCloseVimtab
+command! Tabo WintabsOnlyVimtab
+autocmd FocusGained * :WintabsRefresh
+
+" Airline configurations
+let g:airline#extensions#tabline#enabled = 0
+if has('nvim')
+    let g:airline#extensions#ale#enabled = 1
+endif
+let g:airline_powerline_fonts = 0
+
+" Automatic toggle between absolute and relative line number
+autocmd WinEnter,FocusGained * :setlocal number relativenumber
+autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
+
+" Autopep8 configurations
+noremap <F3> :Autopep8<CR>
+
+" ALE configurations
+if has('nvim')
+    let g:ale_echo_msg_error_str = 'E'
+    let g:ale_echo_msg_warning_str = 'W'
+    let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+    let g:ale_sign_column_always = 1
+    let g:ale_lint_on_enter = 1
+    let g:ale_set_highlights = 1
+    let g:ale_linters = {
+    \   'python': ['flake8'],
+    \}
+endif
+
+if has('python3')
+python3 << EOF
+import vim
+import re
+
+ipdb_breakpoint = 'import ipdb; ipdb.set_trace()'
+
+def set_breakpoint():
+    breakpoint_line = int(vim.eval('line(".")')) - 1
+
+    current_line = vim.current.line
+
+    if ipdb_breakpoint in current_line:
+        vim.command('normal dd:w<cr>')
+    else:
+        white_spaces = re.search('^(\s*)', current_line).group(1)
+        vim.current.buffer.append(white_spaces + ipdb_breakpoint, breakpoint_line)
+
+vim.command('map <F9> :py3 set_breakpoint()<cr>:w<cr>')
+
+def remove_breakpoints():
+    op = 'g/^.*%s.*/d' % ipdb_breakpoint
+    vim.command(op)
+
+vim.command('map <F10> :py3 remove_breakpoints()<cr>:w<cr>')
+EOF
+endif
