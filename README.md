@@ -14,6 +14,11 @@ Refer to: https://medium.com/@zhanwenchen/install-cuda-10-1-and-cudnn-7-5-0-for-
 * tmux
 * git
 
+### Efficiency
+* zsh (https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e)
+* zprezto (https://github.com/sorin-ionescu/prezto)
+* nemo (replace nautilus, works better with Mint themes, https://www.linuxuprising.com/2018/07/how-to-replace-nautilus-with-nemo-file.html)
+
 ### General
 * Chrome
 * Simple note (note with Markdown support, all-platform support)
@@ -23,13 +28,14 @@ Refer to: https://medium.com/@zhanwenchen/install-cuda-10-1-and-cudnn-7-5-0-for-
 ### Collaboration tools
 * Slack
 * Dropbox
+* Overleaf (latex collaboration)
 
 ### Programming
 * Anaconda w/ Python
 * PyCharm
+* Microsoft VS Code
 * Atom
 * Sublime Text
-* Microsoft VS Code
 * MATLAB (if licensed)
 
 ### Deep learning packages
