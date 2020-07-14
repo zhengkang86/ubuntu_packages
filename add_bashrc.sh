@@ -1,12 +1,14 @@
 # Add to ~/.bashrc file
 
 # function to set terminal title  
-function title() {
-  if [[ -z "$ORIG" ]]; then
-    ORIG=$PS1
+function title {
+  if [ -z "$1" ]
+  then
+    title=${PWD##*/} # current directory
+  else
+    title=$1 # first param
   fi
-  TITLE="\[\e]2;$*\a\]"
-  PS1=${ORIG}${TITLE}
+  echo -n -e "\033]0;$title\007"
 }
 
 # aliases
