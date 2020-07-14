@@ -1,7 +1,7 @@
 # Add to ~/.bashrc file
 
 # function to set terminal title  
-function set-title() {
+function title() {
   if [[ -z "$ORIG" ]]; then
     ORIG=$PS1
   fi
