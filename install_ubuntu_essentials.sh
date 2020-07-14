@@ -13,3 +13,7 @@ sudo apt-get install sublime-text -y
 
 # Mathpix Snipping tool
 sudo snap install mathpix-snipping-tool
+
+# zsh, anaconda configurations
+
+# file manager: nemo
