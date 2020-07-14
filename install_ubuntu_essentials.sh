@@ -15,5 +15,7 @@ sudo apt-get install sublime-text -y
 sudo snap install mathpix-snipping-tool
 
 # zsh, anaconda configurations
+zsh - backup .zshrc, .zprezto
+anaconda - backup conda virtualenv config file in YAML format
 
 # file manager: nemo
