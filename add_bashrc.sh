@@ -12,7 +12,7 @@ function title {
 }
 
 # aliases
-alias ll='ls -alFh'
+alias ll='ls -lFh'
 alias feh='feh --scale-down'
 alias df='df -h'
 alias nv='nvidia-smi'
