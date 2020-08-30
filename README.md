@@ -16,7 +16,7 @@ Refer to: https://medium.com/@zhanwenchen/install-cuda-10-1-and-cudnn-7-5-0-for-
 ### Efficiency
 * zsh (https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e)
 * zprezto (https://github.com/sorin-ionescu/prezto)
-* nemo (replace nautilus, works better with Mint themes, https://www.linuxuprising.com/2018/07/how-to-replace-nautilus-with-nemo-file.html)
+* (Optional) nemo (replace nautilus, works better with Mint themes, https://www.linuxuprising.com/2018/07/how-to-replace-nautilus-with-nemo-file.html)
 
 ### General
 * TeamViewer
