@@ -21,8 +21,8 @@ alias nv='nvidia-smi'
 # aliases for git
 alias gau='git add -u'
 alias gcm='git commit -m'
-alias gstat='git status'
-alias gdiff='git diff'
+alias gst='git status'
+alias gdf='git diff'
 
 # alias for tensorboard
 alias tb='tensorboard --logdir'
