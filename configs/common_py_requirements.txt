@@ -22,7 +22,7 @@ simpleitk
 opencv-python
 torch
 torchvision
-tensorflow
 tensorboard
 tensorboardX
 monai
+# tensorflow
