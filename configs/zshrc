@@ -1,0 +1,67 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+# CUDA 10.2
+export CUDA_HOME=/usr/local/cuda 
+export PATH=$PATH:$CUDA_HOME/bin:/usr/local/itksnap-3.8.0-20190612-Linux-gcc64/bin
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/kang/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/kang/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/kang/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/kang/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# aliases
+alias ll='ls -lFh'
+alias feh='feh --scale-down --auto-zoom'
+alias df='df -h'
+alias nv='nvidia-smi'
+#alias nv='watch -n1 nvidia-smi'
+
+# aliases for git
+alias gau='git add -u'
+alias gcm='git commit -m'
+alias gst='git status'
+alias gdf='git diff'
+
+# alias for tensorboard
+alias tb='tensorboard --logdir'
+
+alias tmuxa='tmux a -t'
+
+function title {
+  if [ -z "$1" ]
+  then
+    title=${PWD##*/} # current directory
+  else
+    title=$1 # first param
+  fi
+  echo -n -e "\033]0;$title\007"
+}
+
+# fix home/end key for MobaXTerm ssh access
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
