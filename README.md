@@ -2,7 +2,10 @@
 Packages to be installed for Ubuntu or other Linux distributions, for development
 
 ### Install NVIDIA driver, CUDA, cuDNN
-Refer to: https://medium.com/@zhanwenchen/install-cuda-10-1-and-cudnn-7-5-0-for-pytorch-on-ubuntu-18-04-lts-9b6124c44cc
+(!Deprecated!) Refer to: https://medium.com/@zhanwenchen/install-cuda-10-1-and-cudnn-7-5-0-for-pytorch-on-ubuntu-18-04-lts-9b6124c44cc
+
+(Use Tar file installation 2.3.1) https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html
+https://askubuntu.com/questions/1025928/why-do-i-get-sbin-ldconfig-real-usr-local-cuda-lib64-libcudnn-so-7-is-not-a
 
 ### OS-level
 * NVIDIA driver (Remember to install `nvidia-modprobe` together with `nvidia-driver-xxx`)
